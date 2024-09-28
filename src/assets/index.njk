@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title></title>
+  </head>
+  <body>
+{% include "_common-top.njk" %}
+
+<main class="home-page">
+  <header class="home-page__header container dark-block">
+    <div class="z-1 header-content">
+      <p class="text-upper subtitle">Posted on <span class="text-bold">startup</span></p>
+      <h1 class="page-title">Step-by-step guide to choosing great font pairs</h1>
+      <div>
+      By <a rel="author" href="#">James West</a> | <time>May 23, 2022</time>
+      </div>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      <div class="text-margin-top">
+        <a class="btn" href="#">Read More ></a>
+      </div>
+    </div>
+  </header>
+  <div class="block-margin container column-block">
+    <section class="column-block__block column-block__block--primary">
+      <h2>Featured Post</h2>
+      <article class="media-card media-card--bordered">
+        <div class="media-card__image-wrapper">
+          <img class="media-card__image-wrapper__image" src="{% static 'white-building.png' %}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor">
+        </div>
+        <div class="media-card__meta-data">By <a rel="author" href="#">John Doe</a> | <time>May 23, 2022</time></div>
+        <h3 class="media-card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h3>
+        <p class="media-card__description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <div class="media-card__btn">
+          <a href="#" class="btn">Read More ></a>
+        </div>
+      </article>
+    </section>
+    <section class="column-block__block">
+      <h2>All Posts</h2>
+      <ul class="simple-media-list">
+        <li class="hoverable-block">
+            <article class="media-card">
+              <div class="media-card__meta-data">By <a rel="author" href="#">John Doe</a> | <time>May 23, 2021</time></div>
+              <a class="hoverable-link" href="#">
+                <h3 class="media-card__title">8 Figma design systems that you can download for free today.</h3>
+              </a>
+            </article>
+        </li>
+        <li class="hoverable-block">
+            <article class="media-card">
+              <div class="media-card__meta-data">By <a rel="author" href="#">John Doe</a> | <time>May 23, 2021</time></div>
+              <a class="hoverable-link" href="#">
+                <h3 class="media-card__title">8 Figma design systems that you can download for free today.</h3>
+              </a>
+            </article>
+        </li>
+        <li class="hoverable-block">
+            <article class="media-card">
+              <div class="media-card__meta-data">By <a rel="author" href="#">John Doe</a> | <time>May 23, 2021</time></div>
+              <a class="hoverable-link" href="#">
+                <h3 class="media-card__title">8 Figma design systems that you can download for free today.</h3>
+              </a>
+            </article>
+        </li>
+        <li class="hoverable-block">
+            <article class="media-card">
+              <div class="media-card__meta-data">By <a rel="author" href="#">John Doe</a> | <time>May 23, 2021</time></div>
+              <a class="hoverable-link" href="#">
+                <h3 class="media-card__title">8 Figma design systems that you can download for free today.</h3>
+              </a>
+            </article>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="block-margin container">
+    <section class="column-block bg-secondary-light decorated-top-border">
+      <div class="column-block__block media-card">
+        <p class="subtitle">About us</p>
+        <h2 class="media-card__title">We are a community of content writers who share their learnings</h2>
+        <p class="media-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="media-card__btn">
+          <a href="#">Read More ></a>
+        </div>
+      </div>
+      <section class="column-block__block media-card">
+        <p class="subtitle">Our mision</p>
+        <h3 class="media-card__title">Creating valuable content for creatives all around the world</h3>
+        <p class="media-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </section>
+    </section>
+  </div>
+  <div class="block-margin container">
+    <h2>Choose A Catagory</h2>
+
+    <ul class="list-of-tiles">
+      <li>
+        <a class="btn btn--white media-card media-card--bordered" href="#">
+          <img class="icon media-card__icon" src="{% static 'Business.svg' %}" alt="Business">
+          <h3 class="media-card__title">Business</h3>
+          <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn--white media-card media-card--bordered" href="#">
+          <img class="icon media-card__icon" src="{% static 'Startup.svg' %}" alt="Startup">
+          <h3 class="media-card__title">Startup</h3>
+          <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn--white media-card media-card--bordered" href="#">
+          <img class="icon media-card__icon" src="{% static 'Economy.svg' %}" alt="Economy">
+          <h3 class="media-card__title">Economy</h3>
+          <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn--white media-card media-card--bordered" href="#">
+          <img class="icon media-card__icon" src="{% static 'Technology.svg' %}" alt="Technology">
+          <h3 class="media-card__title">Technology</h3>
+          <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="block-margin container">
+    <section class="special-post">
+      <div class="media-card special-post__content">
+        <div class="subtitle">Why we started</div>
+        <h2 class="media-card__title h1">It started out as a simple idea and evolved into our passion</h2>
+        <p class="media-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <div class="media-card__btn">
+          <a class="btn" href="#">Discover our story ></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+  </body>
+</html>

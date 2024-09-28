@@ -1,0 +1,78 @@
+:root {
+  /* Colors */
+  --color-black: hsl(234deg 21% 17% / 100%);
+  --color-dark: hsl(0deg 0% 30% / 100%);
+  --color-medium-grey: hsl(234deg 4% 45% / 100%);
+  --color-light-grey: hsl(0deg 0% 96% / 100%);
+  --accent-main: hsl(44deg 100% 66% / 100%);
+  --accent-main-light: hsl(44deg 66% 95% / 100%);
+  --accent-secondary: hsl(261deg 57% 42% / 100%);
+  --accent-secondary-light: hsl(270deg 36% 96% / 100%);
+
+  /* Block */
+  --container-width: 1440px;
+  --block-margin: max(0.5rem, 5vmin);
+  --text-margin: max(0.75rem, 3.75vmin);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100svh;
+  color: var(--color-black);
+  line-height: 1.75;
+  line-height: min(calc(100% + 2vmin), 175%);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-family: Sen, sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.25rem, 8vmin, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.125rem, 5.5vmin, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 4vmin, 1.5rem);
+}
+
+@media screen and (width <= 1200px) {
+  h2 {
+    font-size: clamp(1.25rem, 4vmin, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1rem, 3.25vmin, 1.75rem);
+  }
+}

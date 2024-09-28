@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--accent-main);
+  color: var(--color-black);
+  line-height: 1;
+  font-weight: 700;
+  font-size: clamp(0.875rem, 3vmin, 1rem);
+  font-family: Sen, sans-serif;
+}
+
+.btn * {
+  line-height: unset;
+}
+
+.btn--white {
+  background-color: #fff;
+}
+
+@media (hover: hover) {
+  .btn {
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: hsl(44deg 82% 61% / 100%);
+  }
+
+  .btn--white:hover {
+    background-color: var(--accent-main);
+  }
+}
+
+@media screen and (width <= 960px) {
+  .btn {
+    padding: 0.75rem;
+  }
+}
