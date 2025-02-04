@@ -1,5 +1,5 @@
 .special-post {
-position: relative;
+    position: relative;
     display: flex;
     justify-content: flex-end;
     padding-top: calc(var(--block-margin)* 2);
@@ -7,22 +7,55 @@ position: relative;
 }
 
 .special-post::before {
-content: '';
-position: absolute;
-inset: 0;
-width: 80%;
-background: url('../images/friends.png') no-repeat center;
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 80%;
+    background: url('../images/friends.png') no-repeat center;
     background-size: cover;
 }
 
 .special-post__content {
     position: relative;
-z-index: 1;
+    z-index: 1;
     padding: calc(var(--block-margin)* 2);
     max-width: min(716px, 100%);
     background: #fff;
 }
 
-/* @media screen and (width <= 1200px) {
+@media screen and (width <= 1200px) {
+    .special-post__content {
+        backdrop-filter: blur(2px);
+        background-color: #fffd;
+    }
+}
 
-} */
+@media screen and (width <= 960px) {
+    .special-post {
+        padding: var(--block-margin);
+    }
+
+    .special-post::before {
+        width: 100%;
+    }
+}
+
+@media screen and (width <= 480px) {
+    .special-post {
+        display: block;
+        padding: 0;
+    }
+
+    .special-post::before {
+        position: relative;
+        display: block;
+        aspect-ratio: 16/9;
+        backdrop-filter: initial;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }

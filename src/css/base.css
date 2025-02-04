@@ -76,3 +76,18 @@ h3 {
     font-size: clamp(1rem, 3.25vmin, 1.75rem);
   }
 }
+
+.dark-block {
+  background-color: var(--color-black);
+  color: #fff;
+}
+
+.dark-block a {
+  color: var(--accent-main);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

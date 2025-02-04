@@ -1,49 +1,49 @@
 /* sen-regular - latin */
 @font-face {
-    font-weight: 400;
-    font-family: Sen;
-    font-style: normal;
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    src: url('../fonts/sen-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-weight: 400;
+  font-family: Sen;
+  font-style: normal;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  src: url('../fonts/sen-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* sen-500 - latin */
-  @font-face {
-    font-weight: 500;
-    font-family: Sen;
-    font-style: normal;
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    src: url('../fonts/sen-v9-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* sen-500 - latin */
+@font-face {
+  font-weight: 500;
+  font-family: Sen;
+  font-style: normal;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  src: url('../fonts/sen-v9-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* sen-600 - latin */
-  @font-face {
-    font-weight: 600;
-    font-family: Sen;
-    font-style: normal;
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    src: url('../fonts/sen-v9-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* sen-600 - latin */
+@font-face {
+  font-weight: 600;
+  font-family: Sen;
+  font-style: normal;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  src: url('../fonts/sen-v9-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* sen-700 - latin */
-  @font-face {
-    font-weight: 700;
-    font-family: Sen;
-    font-style: normal;
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    src: url('../fonts/sen-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* sen-700 - latin */
+@font-face {
+  font-weight: 700;
+  font-family: Sen;
+  font-style: normal;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  src: url('../fonts/sen-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* sen-800 - latin */
-  @font-face {
-    font-weight: 800;
-    font-family: Sen;
-    font-style: normal;
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    src: url('../fonts/sen-v9-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* sen-800 - latin */
+@font-face {
+  font-weight: 800;
+  font-family: Sen;
+  font-style: normal;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  src: url('../fonts/sen-v9-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* inter-regular - cyrillic_latin */
+/* inter-regular - cyrillic_latin */
 @font-face {
   font-weight: 400;
   font-family: Inter;
