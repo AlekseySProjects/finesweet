@@ -1,18 +1,23 @@
 :root {
   /* Colors */
   --color-black: hsl(234deg 21% 17% / 100%);
-  --color-dark: hsl(0deg 0% 30% / 100%);
-  --color-medium-grey: hsl(234deg 4% 45% / 100%);
-  --color-light-grey: hsl(0deg 0% 96% / 100%);
+  --color-dark: hsl(0deg 0% 30%);
+  --color-medium-grey: hsl(233deg 4% 45%);
+  --color-light-grey: hsl(0deg 0% 96%);
   --accent-main: hsl(44deg 100% 66% / 100%);
-  --accent-main-light: hsl(44deg 66% 95% / 100%);
+  --accent-main-light: hsl(42deg 68% 95%);
   --accent-secondary: hsl(261deg 57% 42% / 100%);
-  --accent-secondary-light: hsl(270deg 36% 96% / 100%);
+  --accent-secondary-light: hsl(274deg 33% 96%);
 
   /* Block */
   --container-width: 1440px;
-  --block-margin: max(0.5rem, 5vmin);
-  --text-margin: max(0.75rem, 3.75vmin);
+  --block-margin: clamp(1rem, 6vmax, 80px);
+  --block-margin-small: calc(var(--block-margin) / 2);
+  --block-margin-big: calc(var(--block-margin) * 1.5);
+  --text-margin: clamp(0.75rem, 3vmin, 1.25rem);
+  --text-margin-small: clamp(0.25rem, 2vmin, 0.625rem);
+
+  /* --block-margin: clamp(0.5rem, 5vmin, 90px); */
 }
 
 * {
@@ -29,7 +34,8 @@ body {
   min-height: 100svh;
   color: var(--color-black);
   line-height: 1.75;
-  line-height: min(calc(100% + 2vmin), 175%);
+
+  /* line-height: min(calc(100% + 1.75vmin), 175%); */
   font-family: Inter, sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
@@ -51,29 +57,54 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
+  margin-top: 0;
   font-family: Sen, sans-serif;
 }
 
-h1 {
-  font-size: clamp(1.25rem, 8vmin, 4rem);
+h1, .h1 {
+  line-height: 1.2;
+  font-size: clamp(1.25rem, 8vmin, 3.5rem);
+  letter-spacing: -2px;
 }
 
-h2 {
-  font-size: clamp(1.125rem, 5.5vmin, 2.5rem);
+h2, .h2 {
+  line-height: 1.33;
+  font-size: clamp(1.125rem, 5.5vmin, 2.25rem);
+  letter-spacing: -2px;
 }
 
-h3 {
-  font-size: clamp(1rem, 4vmin, 1.5rem);
+h3, .h3 {
+  line-height: 1.33;
+  font-size: clamp(1rem, 4vmin, 1.75rem);
+  letter-spacing: -1px;
+}
+
+h4, .h4 {
+  line-height: 1.33;
+  font-weight: bold;
+  font-size: clamp(1rem, 3.75vmin, 1.5rem);
+  letter-spacing: normal;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.skip-letter-spacing {
+  letter-spacing: normal;
 }
 
 @media screen and (width <= 1200px) {
-  h2 {
-    font-size: clamp(1.25rem, 4vmin, 2.5rem);
+  h2, .h2 {
+    font-size: clamp(1.5rem, 5vmin, 2.25rem);
   }
 
-  h3 {
-    font-size: clamp(1rem, 3.25vmin, 1.75rem);
+  h3, .h3 {
+    font-size: clamp(1.25rem, 3.25vmin, 1.75rem);
+  }
+
+  h4, .h4 {
+    font-size: clamp(1.125rem, 2.75vmin, 1.5rem);
   }
 }
 
@@ -86,8 +117,31 @@ h3 {
   color: var(--accent-main);
 }
 
+picture {
+  line-height: 1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@media screen and (width <=1200px) {
+  :root {
+    --block-margin: clamp(.5rem, 3vmin, 1.5rem);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  :root {
+    --block-margin: clamp(1rem, 3vh, 3rem);
+    --block-margin: calc(.5rem + 2.5cqi);
+  }
+}
+
+@media screen and (height <= 640px) and (orientation: landscape) {
+  :root {
+    --block-margin: clamp(1rem, 5vw, 3rem);
   }
 }

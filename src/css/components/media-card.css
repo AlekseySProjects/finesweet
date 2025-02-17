@@ -1,14 +1,37 @@
+.media-card-container {
+  container-type: inline-size;
+}
 
 .media-card {
-    display: flex;
-    flex-flow: column wrap;
-    row-gap: calc(var(--text-margin) / 2);
-    padding: var(--text-margin);
-    line-height: inherit;
+  --gap: var(--text-margin-small);
+  --padding: var(--text-margin);
+
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: var(--gap);
+  padding: var(--padding);
+  height: 100%;
+  line-height: inherit;
+}
+
+.media-card--big-gap {
+  --gap: var(--text-margin);
+}
+
+.media-card--no-gap {
+  --gap: 0;
+}
+
+.media-card--big-padding {
+  --padding: min(var(--block-margin), 30px);
 }
 
 .media-card--bordered {
   border: 1px solid var(--color-light-grey);
+}
+
+.media-card--no-padding {
+  --padding: 0;
 }
 
 .media-card__image-wrapper {
@@ -23,16 +46,14 @@
 
 .media-card__title {
   margin: 0;
+  margin-top: .25em;
   color: var(--color-black);
-
-  /* font-size: min(calc(.75rem + 3cqi), 1.75rem); */
-
-  /* font-size: clamp(1rem, 3vmin, 1.75rem); */
 }
 
 .media-card__description {
   margin: 0;
   color: hsl(234deg 4% 45% / 100%);
+  font-weight: 400;
 
   /* line-height: calc(1 + 1cqi); */
 }
@@ -78,5 +99,41 @@
 
   .media-card--gray:has(.media-card__link:hover) {
     background-color: var(--accent-main-light);
+  }
+}
+
+
+/* @media screen and (orientation: landscape) and (height <= 640px) {
+  .media-card__image-wrapper {
+    max-height: 50vh;
+  }
+} */
+
+@media screen and (width <= 1100px) {
+  .media-card-container {
+    container-name: media-card;
+  }
+}
+
+@container media-card (min-width:640px) {
+    .media-card:has(.media-card__image-wrapper) {
+      display: grid;
+      gap: 0 var(--text-margin);
+      grid: auto-flow / minmax(calc(200px - var(--text-margin) * 2), 1fr) minmax(calc(300px - var(--text-margin) * 2), 1fr);
+    }
+
+    .media-card:has(.media-card__image-wrapper) :where(.media-card__description, .media-card__btn) {
+      margin-top: var(--text-margin-small);
+    }
+
+    .media-card__image-wrapper {
+      grid-row: 1 / 5;
+      aspect-ratio: auto;
+    }
+}
+
+@container media-card (max-width:640px) {
+  .media-card__image-wrapper {
+    max-height: 50vh;
   }
 }
