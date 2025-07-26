@@ -16,6 +16,7 @@
   --block-margin-big: calc(var(--block-margin) * 1.5);
   --text-margin: clamp(0.75rem, 3vmin, 1.25rem);
   --text-margin-small: clamp(0.25rem, 2vmin, 0.625rem);
+  --block-padding: clamp(1rem, 7vmin, 60px);
 
   /* --block-margin: clamp(0.5rem, 5vmin, 90px); */
 }
@@ -28,6 +29,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -94,6 +99,18 @@ blockquote {
   letter-spacing: normal;
 }
 
+:where(button, input:is([type="button" i], [type="reset" i], [type="submit" i])) {
+  border: 0;
+}
+
+:where(input:is([type="text" i], [type="email" i], [type="password" i])) {
+  border: 0;
+  font-size: 1rem;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
 @media screen and (width <= 1200px) {
   h2, .h2 {
     font-size: clamp(1.5rem, 5vmin, 2.25rem);
@@ -111,6 +128,10 @@ blockquote {
 .dark-block {
   background-color: var(--color-black);
   color: #fff;
+}
+
+.grey-block {
+  background-color: hsl(0deg 0% 100% / 5%);
 }
 
 .dark-block a {
@@ -136,7 +157,13 @@ picture {
 @media screen and (orientation: portrait) {
   :root {
     --block-margin: clamp(1rem, 3vh, 3rem);
-    --block-margin: calc(.5rem + 2.5cqi);
+  }
+
+  @supports (width: 1cqi) {
+    :root {
+      --block-margin: calc(.5rem + 2.5cqi);
+    }
+    
   }
 }
 

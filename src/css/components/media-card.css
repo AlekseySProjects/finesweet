@@ -102,13 +102,6 @@
   }
 }
 
-
-/* @media screen and (orientation: landscape) and (height <= 640px) {
-  .media-card__image-wrapper {
-    max-height: 50vh;
-  }
-} */
-
 @media screen and (width <= 1100px) {
   .media-card-container {
     container-name: media-card;
@@ -135,5 +128,29 @@
 @container media-card (max-width:640px) {
   .media-card__image-wrapper {
     max-height: 50vh;
+  }
+}
+
+@container (min-width: 320px) {
+  .media-card:has(> .media-card__icon + .media-card__title + .media-card__description) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      'icon title'
+      'desc desc';
+    align-items: center;
+    gap:var(--text-margin-small) var(--text-margin);
+
+    .media-card__icon {
+      grid-area: icon;
+    }
+
+    .media-card__title {
+      grid-area: title;
+    }
+
+    .media-card__description {
+      grid-area: desc;
+    }
   }
 }

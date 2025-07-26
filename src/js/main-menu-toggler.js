@@ -3,4 +3,5 @@ const adaptiveMenuWrapper = document.querySelector('.adaptive-menu-wrapper');
 
 menuBtn.addEventListener('click', () => {
     adaptiveMenuWrapper.classList.toggle('active');
+    document.body.classList.toggle('skip-scrolling');
 });

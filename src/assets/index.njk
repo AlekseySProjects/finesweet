@@ -2,26 +2,30 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8"/>
-        <title></title>
+        <meta name="description" content="Пример верстки сайта из макета Figma">
+        <title>Finsweet - верстка</title>
+        <link rel="preload" as="image" href="{% static 'man-in-black.webp' %}" type="image/webp" fetchpriority="high">
     </head>
     <body>
         {% include "_common-top.njk" %}
         <main class="home-page">
-            <header class="home-page__header container dark-block">
-                <div class="z-1 header-content">
-                    <p class="text-upper subtitle">Posted on
-                        <span class="text-bold">startup</span>
-                    </p>
-                    <h1 class="page-title">Step-by-step guide to choosing great font pairs</h1>
-                    <div>
-                        By
-                        <a rel="author" href="#">James West</a>
-                        |
-                        <time>May 23, 2022</time>
-                    </div>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                    <div class="block-margin-top">
-                        <a class="btn" href="#">Read More ></a>
+            <header class="home-page__header dark-block">
+                <div class="container">
+                    <div class="z-1 header-content">
+                        <p class="text-upper subtitle">Posted on
+                            <span class="text-bold">startup</span>
+                        </p>
+                        <h1 class="page-title">Step-by-step guide to choosing great font pairs</h1>
+                        <div>
+                            By
+                            <a rel="author" href="#">James West</a>
+                            |
+                            <time>May 23, 2022</time>
+                        </div>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <div class="block-margin-top">
+                            <a class="btn" href="#">Read More ></a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -30,7 +34,10 @@
                     <h2>Featured Post</h2>
                     <article class="media-card media-card--bordered">
                         <div class="media-card__image-wrapper">
-                            <img class="media-card__image-wrapper__image" src="{% static 'white-building.png' %}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor">
+                            <picture>
+                                <source srcset="{% static 'white-building.webp' %}" type="image/webp">
+                                <img loading="lazy" class="media-card__image-wrapper__image" src="{% static 'white-building.png' %}" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor">
+                            </picture>
                         </div>
                         <div class="media-card__meta-data">By
                             <a rel="author" href="#">John Doe</a>
@@ -118,30 +125,30 @@
             <section class="section-margin container">
                 <h2 class="section-title">Choose A Catagory</h2>
                 <ul class="list-of-tiles">
-                    <li>
+                    <li class="container-inline-size">
                         <a class="btn btn--white media-card media-card--bordered" href="#">
-                            <img class="icon media-card__icon" src="{% static 'Business.svg' %}" alt="Business">
+                            <img loading="lazy" class="icon media-card__icon" src="{% static 'Business.svg' %}" alt="Business">
                             <h3 class="media-card__title">Business</h3>
                             <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="container-inline-size">
                         <a class="btn btn--white media-card media-card--bordered" href="#">
-                            <img class="icon media-card__icon" src="{% static 'Startup.svg' %}" alt="Startup">
+                            <img loading="lazy" class="icon media-card__icon" src="{% static 'Startup.svg' %}" alt="Startup">
                             <h3 class="media-card__title">Startup</h3>
                             <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="container-inline-size">
                         <a class="btn btn--white media-card media-card--bordered" href="#">
-                            <img class="icon media-card__icon" src="{% static 'Economy.svg' %}" alt="Economy">
+                            <img loading="lazy" class="icon media-card__icon" src="{% static 'Economy.svg' %}" alt="Economy">
                             <h3 class="media-card__title">Economy</h3>
                             <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="container-inline-size">
                         <a class="btn btn--white media-card media-card--bordered" href="#">
-                            <img class="icon media-card__icon" src="{% static 'Technology.svg' %}" alt="Technology">
+                            <img loading="lazy" class="icon media-card__icon" src="{% static 'Technology.svg' %}" alt="Technology">
                             <h3 class="media-card__title">Technology</h3>
                             <p class="media-card__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         </a>
@@ -171,7 +178,12 @@
                                 <p class="media-card__description text-small">Content Writer @Company</p>
                             </hgroup>
                             <a class="media-card__photo media-card__link media-card__photo--photo-first non-underscore-link" href="#">
-                                <img src="{% static 'authors/Floyd-Miles.jpg' %}" alt="Floyd Miles">
+
+                                <picture>
+                                    <source type="image/webp" srcset="{% static 'authors/Floyd-Miles.webp' %}"></source>
+                                    <img loading="lazy" src="{% static 'authors/Floyd-Miles.jpg' %}" alt="Floyd Miles">
+                                </picture>
+
                             </a>
                             <address>
                                 <ul class="list-inline">
@@ -216,7 +228,7 @@
                             <a class="media-card__photo media-card__link media-card__photo--photo-first non-underscore-link" href="#">
                                 <picture>
                                     <source type="image/webp" srcset="{% static 'authors/Dianne-Russell.webp' %}"></source>
-                                    <img src="{% static 'authors/Dianne-Russell.jpg' %}" alt="Dianne Russell">
+                                    <img loading="lazy" src="{% static 'authors/Dianne-Russell.jpg' %}" alt="Dianne Russell">
                                 </picture>
                             </a>
                             <address>
@@ -262,7 +274,7 @@
                             <a class="media-card__photo media-card__link media-card__photo--photo-first non-underscore-link" href="#">
                                 <picture>
                                     <source type="image/webp" srcset="{% static 'authors/Jenny-Wilson.webp' %}"></source>
-                                    <img src="{% static 'authors/Jenny-Wilson.jpg' %}" alt="Jenny Wilson">
+                                    <img loading="lazy" src="{% static 'authors/Jenny-Wilson.jpg' %}" alt="Jenny Wilson">
                                 </picture>
                             </a>
                             <address>
@@ -308,7 +320,7 @@
                             <a class="media-card__photo media-card__link media-card__photo--photo-first non-underscore-link" href="#">
                                 <picture>
                                     <source type="image/webp" srcset="{% static 'authors/Leslie-Alexander.webp' %}"></source>
-                                    <img src="{% static 'authors/Leslie-Alexander.jpg' %}" alt="Leslie Alexander">
+                                    <img loading="lazy" src="{% static 'authors/Leslie-Alexander.jpg' %}" alt="Leslie Alexander">
                                 </picture>
                             </a>
                             <address>
@@ -354,11 +366,11 @@
                         Featured in
                     </h2>
                     <ul class="list-of-tiles list-of-tiles--small-tile horizontal-block__content opacity_80">
-                        <li><img class="block-centered" src="{% static 'logotypes/Logo_1.svg' %}" alt="Logo 1"></li>
-                        <li><img class="block-centered" src="{% static 'logotypes/Logo_2.svg' %}" alt="Logo 2"></li>
-                        <li><img class="block-centered" src="{% static 'logotypes/Logo_3.svg' %}" alt="Logo 3"></li>
-                        <li><img class="block-centered" src="{% static 'logotypes/Logo_4.svg' %}" alt="Logo 4"></li>
-                        <li><img class="block-centered" src="{% static 'logotypes/Logo_5.svg' %}" alt="Logo 5"></li>
+                        <li><img loading="lazy" class="block-centered" src="{% static 'logotypes/Logo_1.svg' %}" alt="Logo 1"></li>
+                        <li><img loading="lazy" class="block-centered" src="{% static 'logotypes/Logo_2.svg' %}" alt="Logo 2"></li>
+                        <li><img loading="lazy" class="block-centered" src="{% static 'logotypes/Logo_3.svg' %}" alt="Logo 3"></li>
+                        <li><img loading="lazy" class="block-centered" src="{% static 'logotypes/Logo_4.svg' %}" alt="Logo 4"></li>
+                        <li><img loading="lazy" class="block-centered" src="{% static 'logotypes/Logo_5.svg' %}" alt="Logo 5"></li>
                     </ul>
                 </div>
             </section>
@@ -384,7 +396,7 @@
                                                 <div class="person-card__image person-card__image--bordered">
                                                     <picture>
                                                         <source type="image/webp" srcset="{% static 'clients/Jonathan-Vallem.webp' %}"></source>
-                                                        <img class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
+                                                        <img loading="lazy" class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
                                                     </picture>
                                                 </div>
                                                 <div class="person-card__name" translate="no">Jonathan Vallem</div>
@@ -401,7 +413,7 @@
                                                 <div class="person-card__image person-card__image--bordered">
                                                     <picture>
                                                         <source type="image/webp" srcset="{% static 'clients/Jonathan-Vallem.webp' %}"></source>
-                                                        <img class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
+                                                        <img loading="lazy" class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
                                                     </picture>
                                                 </div>
                                                 <div class="person-card__name" translate="no">Jonathan Vallem</div>
@@ -418,7 +430,7 @@
                                                 <div class="person-card__image person-card__image--bordered">
                                                     <picture>
                                                         <source type="image/webp" srcset="{% static 'clients/Jonathan-Vallem.webp' %}"></source>
-                                                        <img class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
+                                                        <img loading="lazy" class="img-fit" src="{% static 'clients/Jonathan-Vallem.jpg' %}" alt="Jonathan Vallem">
                                                     </picture>
                                                 </div>
                                                 <div class="person-card__name" translate="no">Jonathan Vallem</div>
@@ -447,6 +459,88 @@
                     </div>
                 </div>
             </section>
+            <section class="section-margin container">
+                <div class="short-block text-center">
+                    <h2>Join our team to be a part of our story</h2>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a class="btn" href="#">Join Now</a>
+                </div>
+            </section>
+            <footer class="container dark-block large-padding-x">
+                <div class="footer-nav large-padding-b">
+                    <div class="footer-nav__logo">
+                        <img width="140" height="29" src="{% static 'Logo.svg' %}" alt="Finsweet">
+                    </div>
+                    <nav class="footer-nav__menu">
+                        <ul class="site-menu">
+                            <li>
+                                <a class="site-menu__item" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="site-menu__item" href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a class="site-menu__item" href="#">About us</a>
+                            </li>
+                            <li>
+                                <a class="site-menu__item" href="#">Contact us</a>
+                            </li>
+                            <li>
+                                <a class="site-menu__item" href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="column-block column-block--big-gap grey-block large-padding">
+                    <div class="column-block__block">
+                        <h2 class="m-0">Subscribe to our news&nbsp;letter to&nbsp;get latest updates and&nbsp;news</h2>
+                    </div>
+                    <div class="column-block__block">
+                        <form action="#">
+                            <div class="inline-form inline-form--grey">
+                                <input class="inline-form__input" type="email" name="email" id="subscribe_email" autocomplete="autocomplete" placeholder="Enter Your Email">
+                                <button class="btn inline-form__btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="large-padding-t footer-contacts">
+                    <div class="footer-contacts__address text-secondary">
+                        Finstreet 118 2561 Fintown<br>
+                        Hello@finsweet.com 020 7993 2905
+                    </div>
+                    <ul class="list-inline footer-contacts__social-networks">
+                        <li>
+                            <a class="icon-link" rel="noopener" target="_blank" href="#">
+                                <svg class="social-icon social-icon--light icon" width="16" height="16" alt="facebook">
+                                    <use href="{% static 'social-networks/sprite.svg' %}#social-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link" rel="noopener" target="_blank" href="#">
+                                <svg class="social-icon social-icon--light icon" width="16" height="16" alt="twitter">
+                                    <use href="{% static 'social-networks/sprite.svg' %}#social-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link" rel="noopener" target="_blank" href="#">
+                                <svg class="social-icon social-icon--light icon" width="16" height="16" alt="instagram">
+                                    <use href="{% static 'social-networks/sprite.svg' %}#social-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link" rel="noopener" target="_blank" href="#">
+                                <svg class="social-icon social-icon--light icon" width="16" height="16" alt="linkedin">
+                                    <use href="{% static 'social-networks/sprite.svg' %}#social-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </main>
     </body>
 </html>
